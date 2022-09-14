@@ -1,16 +1,23 @@
-#include "main.h"
 #include <stdio.h>
+
 /**
- * _abs - function that computes the absolute value of an integer
- * @c:  is the int that will use for the argument of the function
- * Return: 0
+ * print_to_98 - Prints all natural numbers from input to 98,
+ *               in order separated by a comma followed by a space.
+ * @n: The number to begin counting at.
  */
-int _abs(int c)
+void print_to_98(int n)
 {
-	if (c > 0 || c == 0)
+	if (n >= 98)
 	{
-	return (c);
+		while (n > 98)
+			printf("%d, ", n--);
+		printf("%d\n", n);
 	}
+
 	else
-	return (c * -1);
+	{
+		while (n < 98)
+			printf("%d, ", n++);
+		printf("%d\n", n);
+	}
 }
