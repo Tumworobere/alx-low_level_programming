@@ -8,3 +8,4 @@ int main(void)
 	puts2(str);
 	return (0);
 }
+
