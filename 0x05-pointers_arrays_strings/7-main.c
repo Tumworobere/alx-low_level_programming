@@ -8,3 +8,4 @@ int main(void)
 	puts_half(str);
 	return (0);
 }
+
