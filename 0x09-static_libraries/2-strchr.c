@@ -1,23 +1,23 @@
-#include "main.h"
-#include <stddef.h> 
+#include "holberton.h"
+#include <stdio.h>
+
 /**
-*_strchr - Returns a pointer to the first occurrence
-*of the character c in the string s, or NULL if the
-*character is not found
-*
-*@s:string targeted
-*@c:character targeted
-*
-*Return: returns pointer to first occcurence of c
-*/
+ * _strchr - function that locates a character in a string
+ *
+ * @s: parameter defined in main, pointer to memory (string)
+ * @c: parameter defined in main, character to be located
+ *
+ * Return: memory address of function (memory area)
+ */
+
 char *_strchr(char *s, char c)
 {
-	int i;
-
-	for (i = 0; (s[i] != c) && (s[i] != '\0'); i++)
-		;
-	if (s[i] == c)
-		return (s + i);
-	else
-		return (NULL);
+	while (s++)
+	{
+		if (*s == c)
+			return (s);
+		if (!*s)
+			return (NULL);
+	}
+	return (NULL);
 }
